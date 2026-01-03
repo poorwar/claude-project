@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[SET-UP] 코듀로이 트랙 라인 투웨이 자켓 셋업</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-item {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .badge-discount {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold gradient-text">[SET-UP]</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-gray-900 transition">제품 특징</a>
+                    <a href="#specs" class="text-gray-700 hover:text-gray-900 transition">상세 정보</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-gray-900 transition">상품평</a>
+                    <a href="#cta" class="text-gray-700 hover:text-gray-900 transition">구매</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <div class="badge-discount text-white px-4 py-2 rounded-full w-fit text-sm font-semibold">
+                        36% 할인 중
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold leading-tight">
+                        코듀로이 트랙 라인 <br><span class="gradient-text">투웨이 자켓</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        스포츠와 일상을 완벽하게 아우르는 루즈 핏 셋업. 격렬한 활동부터 데일리까지 모든 스타일을 커버하세요.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-baseline gap-4">
+                            <span class="text-4xl font-bold">69,900원</span>
+                            <span class="price-original text-2xl">110,000원</span>
+                        </div>
+                        <p class="text-gray-400">예상 배송: 2026년 1월 9일 (금)</p>
+                    </div>
+                    <button onclick="scrollToSection('#cta')" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg w-full md:w-auto">
+                        지금 구매하기
+                    </button>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="relative h-80 md:h-96 bg-gradient-to-br from-purple-900 to-blue-900 rounded-2xl flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 opacity-20">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+                    </div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4">👕</div>
+                        <p class="text-white text-2xl font-bold">코듀로이 셋업</p>
+                        <p class="text-gray-300">완벽한 스타일과 편의성</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-4">왜 선택해야 할까?</h3>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    DRIX의 코듀로이 트랙 라인 자켓은 운동과 일상의 경계를 허뭅니다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-item card-hover bg-white p-8 rounded-xl shadow-lg" style="animation-delay: 0s;">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-2xl mb-6">
+                        👟
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">루즈 핏</h4>
+                    <p class="text-gray-600">
+                        편한 움직임을 위한 루즈 핏 설계로, 스포츠 활동과 일상 착용 모두에 최적화되어 있습니다.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-item card-hover bg-white p-8 rounded-xl shadow-lg" style="animation-delay: 0.1s;">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white text-2xl mb-6">
+                        🌡️
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">다계절 사용</h4>
+                    <p class="text-gray-600">
+                        봄, 가을, 겨울 세 계절에 걸쳐 활용 가능한 소재로, 연중 내내 스타일을 유지하세요.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-item card-hover bg-white p-8 rounded-xl shadow-lg" style="animation-delay: 0.2s;">
+                    <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center text-white text-2xl mb-6">
+                        ✨
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">고급 소재</h4>
+                    <p class="text-gray-600">
+                        보통의 신축성과 촉감으로 고급스러운 착용감을 제공합니다. 비침 없이 자신감 있게.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="feature-item card-hover bg-white p-8 rounded-xl shadow-lg" style="animation-delay: 0.3s;">
+                    <h4 class="text-lg font-bold mb-3">📦 빠른 배송</h4>
+                    <p class="text-gray-600">
+                        2026년 1월 5일 출고 예정. 빠르게 배송되어 곧바로 착용할 수 있습니다.
+                    </p>
+                </div>
+
+                <div class="feature-item card-hover bg-white p-8 rounded-xl shadow-lg" style="animation-delay: 0.4s;">
+                    <h4 class="text-lg font-bold mb-3">⭐ 높은 만족도</h4>
+                    <p class="text-gray-600">
+                        33개 리뷰 기반 4.6/5.0 평점. 실제 구매자들이 만족하고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold mb-12 text-center">상세 정보</h3>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Specs Table -->
+                <div class="space-y-4">
+                    <h4 class="text-2xl font-bold mb-6">제품 스펙</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between pb-4 border-b border-gray-200">
+                            <span class="font-semibold text-gray-700">브랜드</span>
+                            <span class="text-gray-600">DRIX (드릭스)</span>
+                        </div>
+                        <div class="flex justify-between pb-4 border-b border-gray-200">
+                            <span class="font-semibold text-gray-700">카테고리</span>
+                            <span class="text-gray-600">스포츠/레저 > 상하의세트</span>
+                        </div>
+                        <div class="flex justify-between pb-4 border-b border-gray-200">
+                            <span class="font-semibold text-gray-700">핏</span>
+                            <span class="text-gray-600">루즈 핏</span>
+                        </div>
+                        <div class="flex justify-between pb-4 border-b border-gray-200">
+                            <span class="font-semibold text-gray-700">촉감</span>
+                            <span class="text-gray-600">보통</span>
+                        </div>
+                        <div class="flex justify-between pb-4 border-b border-gray-200">
+                            <span class="font-semibold text-gray-700">신축성</span>
+                            <span class="text-gray-600">보통</span>
+                        </div>
+                        <div class="flex justify-between pb-4 border-b border-gray-200">
+                            <span class="font-semibold text-gray-700">두께</span>
+                            <span class="text-gray-600">보통</span>
+                        </div>
+                        <div class="flex justify-between pb-4 border-b border-gray-200">
+                            <span class="font-semibold text-gray-700">비침</span>
+                            <span class="text-gray-600">없음</span>
+                        </div>
+                        <div class="flex justify-between pb-4">
+                            <span class="font-semibold text-gray-700">적용 계절</span>
+                            <span class="text-gray-600">봄, 가을, 겨울</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping Info -->
+                <div class="space-y-4">
+                    <h4 class="text-2xl font-bold mb-6">배송 정보</h4>
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl space-y-4">
+                        <div class="space-y-2">
+                            <p class="text-sm text-gray-600 font-semibold">예상 출고일</p>
+                            <p class="text-2xl font-bold text-gray-900">2026년 1월 5일</p>
+                        </div>
+                        <div class="border-t border-blue-200 pt-4 space-y-2">
+                            <p class="text-sm text-gray-600 font-semibold">예상 도착일</p>
+                            <p class="text-2xl font-bold text-gray-900">2026년 1월 9일 (금)</p>
+                            <p class="text-sm text-gray-600">도착 확률: 74%</p>
+                        </div>
+                        <div class="border-t border-blue-200 pt-4 space-y-2">
+                            <p class="text-sm text-gray-600 font-semibold">배송비</p>
+                            <p class="text-xl font-bold text-gray-900">6,000원</p>
+                            <p class="text-sm text-gray-600">제주 및 기타 지역 추가 3,000원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold mb-12 text-center">구매자 평가</h3>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Rating Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center justify-center h-full">
+                    <div class="text-6xl font-bold gradient-text mb-4">4.6</div>
+                    <div class="flex gap-1 mb-4">
+                        <span class="text-2xl">⭐</span>
+                        <span class="text-2xl">⭐</span>
+                        <span class="text-2xl">⭐</span>
+                        <span class="text-2xl">⭐</span>
+                        <span class="text-2xl">⭐</span>
+                    </div>
+                    <p class="text-gray-600 text-center mb-4">33개의 리뷰 기반</p>
+                    <p class="text-sm text-gray-500 text-center">
+                        실제 구매자들이 만족하고 있는 제품입니다.
+                    </p>
+                </div>
+
+                <!-- Review Summary -->
+                <div class="bg-white p-8 rounded-xl shadow-lg space-y-6">
+                    <h4 class="text-xl font-bold">고객들이 추천하는 이유</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl">✅</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">편한 착용감</p>
+                                <p class="text-sm text-gray-600">루즈 핏으로 활동성이 뛰어나요</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl">✅</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">다양한 활용</p>
+                                <p class="text-sm text-gray-600">스포츠부터 데일리까지 완벽해요</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl">✅</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">가성비 좋음</p>
+                                <p class="text-sm text-gray-600">36% 할인 가격이 정말 저렴해요</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 hero-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-5xl font-bold mb-6">지금 바로 주문하세요</h3>
+                <p class="text-xl text-gray-300 mb-4">
+                    36% 할인 가격으로 만나는 DRIX의 프리미엄 코듀로이 셋업
+                </p>
+                <p class="text-gray-400 mb-8">
+                    재고가 한정되어 있습니다. 지금 주문하면 2026년 1월 9일에 도착합니다.
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-4 justify-center mb-8">
+                    <button class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg flex-1 md:flex-none md:min-w-64">
+                        무신사에서 구매하기
+                    </button>
+                    <button onclick="copyToClipboard()" class="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition hover:bg-gray-100 flex-1 md:flex-none">
+                        상품 코드 복사
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 pt-8 border-t border-white border-opacity-20">
+                    <div>
+                        <p class="text-2xl font-bold">69,900원</p>
+                        <p class="text-gray-400 text-sm">특별 할인가</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold">36% OFF</p>
+                        <p class="text-gray-400 text-sm">정가 대비 할인</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold">4.6/5.0</p>
+                        <p class="text-gray-400 text-sm">고객 평점</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">[SET-UP]</h4>
+                    <p class="text-sm">DRIX의 프리미엄 코듀로이 트랙 라인 투웨이 자켓</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">제품</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#features" class="hover:text-white transition">제품 특징</a></li>
+                        <li><a href="#specs" class="hover:text-white transition">상세 정보</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition">상품평</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">브랜드</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-white transition">DRIX 소개</a></li>
+                        <li><a href="#" class="hover:text-white transition">컬렉션</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">구매처</h4>
+                    <ul class="text-sm space-y-2">
+                        <li>무신사 - 상품코드: 5417840</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 DRIX. 모든 권리 보유.</p>
+                <p class="mt-2 text-gray-500">이 페이지는 제품 홍보 목적으로 제작되었습니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function scrollToSection(selector) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function copyToClipboard() {
+            const text = '5417840';
+            navigator.clipboard.writeText(text).then(() => {
+                alert('상품 코드가 복사되었습니다: ' + text);
+            }).catch(err => {
+                console.error('복사 실패:', err);
+            });
+        }
+
+        // Navbar highlight on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Animate feature items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
