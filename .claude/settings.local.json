@@ -4,7 +4,10 @@
       "mcp__github__get_me",
       "mcp__github__search_repositories",
       "Bash(git fetch:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(file:*)",
+      "Bash(find:*)",
+      "Bash(tree:*)"
     ]
   }
 }

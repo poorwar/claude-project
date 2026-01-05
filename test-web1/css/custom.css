@@ -1,0 +1,518 @@
+/* =============================================
+   Custom Styles for Startup CEO Profile
+   ============================================= */
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;900&display=swap');
+
+/* =============================================
+   1. Typography & Font Settings
+   ============================================= */
+
+* {
+    font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Korean Font Optimization */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =============================================
+   2. Gradient Text Utility
+   ============================================= */
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+/* =============================================
+   3. Animation Keyframes
+   ============================================= */
+
+/* Fade In and Slide Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating Animation for Background Elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+/* Smooth Scale on Hover */
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    }
+}
+
+/* =============================================
+   4. Utility Classes
+   ============================================= */
+
+/* Fade In Up with Staggering */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Floating Background Elements */
+.float-blob {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Smooth Scroll Behavior */
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+/* =============================================
+   5. Scrollbar Styling
+   ============================================= */
+
+/* Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Firefox */
+* {
+    scrollbar-color: #667eea #f1f1f1;
+    scrollbar-width: thin;
+}
+
+/* =============================================
+   6. Link & Button Hover Effects
+   ============================================= */
+
+a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+button, [role="button"], a[href] {
+    transition: all 0.3s ease;
+}
+
+/* =============================================
+   7. Focus States for Accessibility
+   ============================================= */
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* =============================================
+   8. Selection Color
+   ============================================= */
+
+::selection {
+    background-color: #667eea;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #667eea;
+    color: white;
+}
+
+/* =============================================
+   9. Responsive Typography
+   ============================================= */
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* =============================================
+   10. Print Styles
+   ============================================= */
+
+@media print {
+    body {
+        background: white;
+    }
+
+    nav, footer {
+        display: none;
+    }
+
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* =============================================
+   11. Dark Mode Support (Optional Future Use)
+   ============================================= */
+
+@media (prefers-color-scheme: dark) {
+    /* Colors will be inverted if dark mode is enabled */
+    /* Currently not needed, but available for future implementation */
+}
+
+/* =============================================
+   12. Reduced Motion for Accessibility
+   ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =============================================
+   13. High Contrast Mode Support
+   ============================================= */
+
+@media (prefers-contrast: more) {
+    body {
+        color: #000;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* =============================================
+   14. Custom Animations for Specific Elements
+   ============================================= */
+
+/* Staggered animation for multiple elements */
+.fade-in-up:nth-child(1) { animation-delay: 0s; }
+.fade-in-up:nth-child(2) { animation-delay: 0.1s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.2s; }
+.fade-in-up:nth-child(4) { animation-delay: 0.3s; }
+.fade-in-up:nth-child(5) { animation-delay: 0.4s; }
+
+/* =============================================
+   15. Loading & Transition States
+   ============================================= */
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+input,
+textarea,
+select {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =============================================
+   16. Mobile Menu Specific Styles
+   ============================================= */
+
+#mobile-menu {
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =============================================
+   17. Responsive Image Optimization
+   ============================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =============================================
+   18. Card Hover Effect Enhancement
+   ============================================= */
+
+.hover\:-translate-y-2:hover {
+    transform: translateY(-8px);
+}
+
+/* =============================================
+   19. Shadow and Depth Effects
+   ============================================= */
+
+.shadow-glow {
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.15);
+}
+
+/* =============================================
+   20. Text Utilities
+   ============================================= */
+
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* =============================================
+   21. Responsive Container
+   ============================================= */
+
+.container-responsive {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container-responsive {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-responsive {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* =============================================
+   22. Animation Delay Helpers
+   ============================================= */
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* =============================================
+   23. Backdrop Blur Enhancement
+   ============================================= */
+
+@supports (backdrop-filter: blur(10px)) {
+    .backdrop-blur-md {
+        backdrop-filter: blur(12px);
+    }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+    .backdrop-blur-md {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+/* =============================================
+   24. Code Block Styling (if needed)
+   ============================================= */
+
+code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* =============================================
+   25. Transform & Performance Optimization
+   ============================================= */
+
+/* Use transform and opacity for smooth animations */
+* {
+    will-change: auto;
+}
+
+.animate-on-scroll {
+    will-change: transform, opacity;
+}
+
+/* =============================================
+   26. Placeholder Styling
+   ============================================= */
+
+::placeholder {
+    color: #999;
+    opacity: 0.7;
+}
+
+::-moz-placeholder {
+    color: #999;
+    opacity: 0.7;
+}
+
+/* =============================================
+   27. Form Elements
+   ============================================= */
+
+input, textarea, select {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* =============================================
+   28. Transition Classes
+   ============================================= */
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+/* =============================================
+   29. Cross-browser Compatibility
+   ============================================= */
+
+/* Ensure consistent rendering */
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =============================================
+   30. Utility for Screen Reader Only
+   ============================================= */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* =============================================
+   End of Custom Styles
+   ============================================= */
